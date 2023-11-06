@@ -144,8 +144,6 @@
 #define ES_PERC     &kp LS(N5)    // %
 #define ES_AMPER    &kp LS(N6)    // & 
 #define ES_SLASH    &kp LS(N7)    // /
-#define ES_PAREN    &kp LS(N8)    // (
-#define ES_PAREN_R  &kp LS(N9)    // )
 #define ES_EQUAL    &kp LS(N0)    // =
 #define ES_QUEST_R  &kp LS(MINUS) // ?
 #define ES_QUEST    &kp LS(EQUAL) // ¿
@@ -162,13 +160,15 @@
 #define ES_HASH     &kp RA(N3)    // #
 #define ES_NOT      &kp RA(N6)    // ¬
 
-#define ES_CORCH    &kp RA(LBKT)  // [
-#define ES_CORCH_R  &kp RA(RBKT)  // ]
-#define ES_LLAVE    &kp RA(APOS)  // {
-#define ES_LLAVE_R  &kp RA(BACKSLASH) // }
+#define ES_PAREN      &kp LEFT_PARENTHESIS  // (
+#define ES_PAREN_R    &kp RIGHT_PARENTHESIS // )
+#define ES_BRACKET    &kp LEFT_BRACKET      // [
+#define ES_BRACKET_R  &kp RIGHT_BRACKET     // ]
+#define ES_BRACE      &kp LEFT_BRACE        // {
+#define ES_BRACE_R    &kp RIGHT_BRACE       // }
 
-#define ES_EURO     &kp RA(E)     // €
-#define ES_LESS     &kp NON_US_BSLH // <
-#define ES_MORE     &kp PIPE2     // >
+#define ES_EURO     &kp RA(E)         // €
+#define ES_LESS     &kp NON_US_BSLH   // <
+#define ES_MORE     &kp PIPE2         // >
 #define ES_ACEN_GU  &kp DOUBLE_QUOTES // ¨ 
 
