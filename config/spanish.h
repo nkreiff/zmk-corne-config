@@ -11,7 +11,7 @@
 // CONTROL CMD/WINDOWS SHIFT ALT/META/OPTION
 #define ES_LCTRL &kp LCTRL      // left control
 #define ES_RCTRL &kp RCTRL      // right control
-#define ES_WIN   &kp LGUI       // WIN
+#define ES_LCMD  &kp LCMD       // WIN
 #define ES_CMENU &kp K_CMENU    // WIN
 #define ES_LALT  &kp LALT
 #define ES_ALGR  &kp RALT
