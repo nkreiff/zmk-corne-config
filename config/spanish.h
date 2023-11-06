@@ -25,6 +25,7 @@
 #define ES_RIGHT &kp RIGHT
 
 // SPACE CAPS TAB ENTER BACKSPACE ESCAPE DELETE
+#define ES_ESC  &kp ESC     // Escape
 #define ES_SPC  &kp SPACE   // Space
 #define ES_CAPS &kp CAPS    // Caps Lock
 #define ES_BSPC &kp BSPC    // Backspace
@@ -42,7 +43,6 @@
 #define ES_PAUSE &kp PAUSE_BREAK
 
 // FUNCTION KEYS
-#define ES_ESC &kp ESC
 #define ES_F1  &kp F1
 #define ES_F2  &kp F2
 #define ES_F3  &kp F3
@@ -145,7 +145,7 @@
 #define ES_AMPER    &kp LS(N6)    // & 
 #define ES_SLASH    &kp LS(N7)    // /
 #define ES_EQUAL    &kp LS(N0)    // =
-#define ES_QUEST_R  &kp LS(MINUS) // ?
+#define ES_QUEST_R  &kp QUESTION  // ?
 #define ES_QUEST    &kp LS(EQUAL) // ¿
 #define ES_UNDER    &kp UNDER     // _
 #define ES_TILDE    &kp TILDE     // ~

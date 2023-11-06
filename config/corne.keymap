@@ -70,7 +70,7 @@
             bindings = <
 // -------------------------------------------------------------   -------------------------------------------------------------
 // |   ESC   |    *    |    ~    |    @    |    #    |    +    |   |    "    |    {    |    }    |    =    |    ?    |  BKSP   |
-     ES_ESC    ES_STAR   S_TILDE    ES_AT    ES_HASH   ES_PLUS     ES_DOUB_APO ES_BRACE ES_BRACE_R ES_EQUAL ES_QUEST_R ES_BSPC
+     ES_ESC    ES_STAR   ES_TILDE   ES_AT    ES_HASH   ES_PLUS     ES_DOUB_APO ES_BRACE ES_BRACE_R ES_EQUAL ES_QUEST_R ES_BSPC
 // |         |         |         |         |         |         |   |         |         |         |         |         |         |
 // -------------------------------------------------------------   -------------------------------------------------------------
 // |   TAB   |    /    |    $    |    %    |    &    |    -    |   |    '    |    (    |    )    |    |    |    `    |  R-CTRL |
