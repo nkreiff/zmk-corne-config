@@ -24,7 +24,7 @@
 // |         |         |         |         |         |         |   |         |         |         |         |         |         |
 // -------------------------------------------------------------   -------------------------------------------------------------
 // |  SHFT   |    Z    |    X    |    C    |    V    |    B    |   |    N    |    M    |    ,    |    .    |    /    |   SHFT  |
-     ES_LSHFT   ES_Z      ES_X      ES_C      ES_V      ES_B          ES_N      ES_M     ES_COMMA  ES_DOT    ES_FSLH   ES_RSHFT 
+     ES_LSHFT   ES_Z      ES_X      ES_C      ES_V      ES_B          ES_N      ES_M     ES_COMMA  ES_DOT    ES_SLASH  ES_RSHFT 
 // |         |         |         |         |         |         |   |         |         |         |         |         |         |
 // -------------------------------------------------------------   -------------------------------------------------------------
 //                               |   GUI   |   LWR   |  SPACE  |   |  RETURN |   RSE   |   ALT   |
@@ -63,16 +63,16 @@
      ES_ESC     ES_Q      ES_W      ES_E      ES_R      ES_T          ES_Y      ES_U      ES_I      ES_O      ES_P     ES_BSPC
 // |         |         |         |         |         |         |   |         |         |         |         |         |         |
 // -------------------------------------------------------------   -------------------------------------------------------------
-// |   TAB   |    A    |    S    |    D    |    F    |    G    |   |    H    |    J    |    K    |    L    |    ;    |   RET   |
-     ES_TAB     ES_A      ES_S      ES_D      ES_F      ES_G          ES_H      ES_J      ES_K      ES_L     ES_SEMI   ES_RET
+// |   TAB   |    A    |    S    |    D    |    F    |    G    |   |    H    |    J    |    K    |    L    |    Ñ    |  R-CTRL |
+     ES_TAB     ES_A      ES_S      ES_D      ES_F      ES_G          ES_H      ES_J      ES_K      ES_L     ES_SEMI   ES_RCTRL
 // |         |         |         |         |         |         |   |         |         |         |         |         |         |
 // -------------------------------------------------------------   -------------------------------------------------------------
 // |  SHFT   |    Z    |    X    |    C    |    V    |    B    |   |    N    |    M    |    ,    |    .    |    /    |   SHFT  |
-     ES_LSHFT   ES_Z      ES_X      ES_C      ES_V      ES_B          ES_N      ES_M     ES_COMMA  ES_DOT    ES_FSLH   ES_RSHIFT 
+     ES_LSHFT   ES_Z      ES_X      ES_C      ES_V      ES_B          ES_N      ES_M     ES_COMMA  ES_DOT    ES_SLASH  ES_RSHFT 
 // |         |         |         |         |         |         |   |         |         |         |         |         |         |
 // -------------------------------------------------------------   -------------------------------------------------------------
-//                               |   GUI   |   LWR   |  SPACE  |   |  SPACE  |   RSE   |   ALT   |
-                                   ES_LGUI    LAY_1    ES_SPACE     ES_SPACE    LAY_2    ES_RALT
+//                               |   GUI   |   LWR   |  SPACE  |   |  RETURN |   RSE   |   ALT   |
+                                   ES_LGUI    LAY_1    ES_SPACE       ES_RET    LAY_2    ES_RALT
 //                               |         |         |         |   |         |         |         |
 //                               -------------------------------   -------------------------------
             >;
