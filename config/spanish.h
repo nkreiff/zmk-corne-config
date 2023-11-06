@@ -150,6 +150,7 @@
 #define ES_QUEST_R  &kp LS(MINUS) // ?
 #define ES_QUEST    &kp LS(EQUAL) // ¿
 #define ES_UNDER    &kp UNDER     // _
+#define ES_TILDE    &kp TILDE     // ~
 
 #define ES_ACEN_CIR &kp LS(LBKT)  // ^
 #define ES_STAR     &kp LS(RBKT)  // *
