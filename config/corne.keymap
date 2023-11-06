@@ -10,6 +10,16 @@
 #include "spanish.h"
 
 / {
+    behaviors {
+        slash_underscore: slash_underscore {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SLASH_TO_UNDERSCORE";
+            #binding-cells = <0>;
+            bindings = <&kp LS(N7)>, <&kp UNDER>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
         default_layer {
@@ -60,7 +70,7 @@
             bindings = <
 // -------------------------------------------------------------   -------------------------------------------------------------
 // |   ESC   |    *    |    ~    |    @    |    #    |    +    |   |    "    |    {    |    }    |    =    |    ?    |  BKSP   |
-     ES_ESC    ES_STAR    ES_W      ES_AT    ES_HASH   ES_PLUS     ES_DOUB_APO ES_LLAVE ES_LLAVE_R ES_EQUAL ES_QUEST_R ES_BSPC
+     ES_ESC    ES_STAR     S_W      ES_AT    ES_HASH   ES_PLUS     ES_DOUB_APO ES_LLAVE ES_LLAVE_R ES_EQUAL ES_QUEST_R ES_BSPC
 // |         |         |         |         |         |         |   |         |         |         |         |         |         |
 // -------------------------------------------------------------   -------------------------------------------------------------
 // |   TAB   |    /    |    $    |    %    |    &    |    -    |   |    '    |    (    |    )    |    |    |    `    |  R-CTRL |

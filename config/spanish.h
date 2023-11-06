@@ -15,8 +15,8 @@
 #define ES_CMENU &kp K_CMENU    // WIN
 #define ES_LALT  &kp LALT
 #define ES_ALGR  &kp RALT
-#define ES_LSHFT &kp LSHFT
-#define ES_RSHFT &kp RSHFT
+#define ES_LSHFT &sk LSHFT
+#define ES_RSHFT &sk RSHFT
 
 // ARROWS
 #define ES_UP    &kp UP
@@ -149,6 +149,7 @@
 #define ES_EQUAL    &kp LS(N0)    // =
 #define ES_QUEST_R  &kp LS(MINUS) // ?
 #define ES_QUEST    &kp LS(EQUAL) // ¿
+#define ES_UNDER    &kp UNDER     // _
 
 #define ES_ACEN_CIR &kp LS(LBKT)  // ^
 #define ES_STAR     &kp LS(RBKT)  // *
