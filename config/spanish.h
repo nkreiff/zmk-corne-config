@@ -9,14 +9,14 @@
 #define LAY_3 &mo 3
 
 // CONTROL CMD/WINDOWS SHIFT ALT/META/OPTION
-#define ES_LCTL  &kp LCTRL      // left control
-#define ES_RCTL  &kp RCTRL      // right control
+#define ES_LCTRL &kp LCTRL      // left control
+#define ES_RCTRL &kp RCTRL      // right control
 #define ES_WIN   &kp LGUI       // WIN
 #define ES_CMENU &kp K_CMENU    // WIN
 #define ES_LALT  &kp LALT
 #define ES_ALGR  &kp RALT
-#define ES_LSFT  &kp LSHFT
-#define ES_RSFT  &kp RSHFT
+#define ES_LSHFT &kp LSHFT
+#define ES_RSHFT &kp RSHFT
 
 // ARROWS
 #define ES_UP    &kp UP
