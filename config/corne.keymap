@@ -29,8 +29,8 @@
      ES_ESC     ES_Q      ES_W      ES_E      ES_R      ES_T          ES_Y      ES_U      ES_I      ES_O      ES_P     ES_BSPC
 // |         |         |         |         |         |         |   |         |         |         |         |         |         |
 // -------------------------------------------------------------   -------------------------------------------------------------
-// |   TAB   |    A    |    S    |    D    |    F    |    G    |   |    H    |    J    |    K    |    L    |    Ñ    |  R-CTRL |
-     ES_TAB     ES_A      ES_S      ES_D      ES_F      ES_G          ES_H      ES_J      ES_K      ES_L     ES_EGNE   ES_RCTRL
+// |   TAB   |    A    |    S    |    D    |    F    |    G    |   |    H    |    J    |    K    |    L    |    Ñ    |  L-CTRL |
+     ES_TAB     ES_A      ES_S      ES_D      ES_F      ES_G          ES_H      ES_J      ES_K      ES_L     ES_EGNE   ES_LCTRL
 // |         |         |         |         |         |         |   |         |         |         |         |         |         |
 // -------------------------------------------------------------   -------------------------------------------------------------
 // |  SHFT   |    Z    |    X    |    C    |    V    |    B    |   |    N    |    M    |    ,    |    .    |    /    |   SHFT  |
@@ -48,15 +48,15 @@
             bindings = <
 // -------------------------------------------------------------   -------------------------------------------------------------
 // |   ESC   |    *    |    1    |    2    |    3    |    +    |   |         |         |         |         |         |         |
-     ES_ESC    ES_STAR    ES_1      ES_2      ES_3     ES_PLUS       ES_HOME   ES_PGDN   ES_PGUP   ES_END    ES_TRANS  ES_TRANS
+     ES_ESC    ES_STAR    ES_1      ES_2      ES_3     ES_PLUS       ES_HOME   ES_PGDN   ES_PGUP   ES_END    ES_TRANS ES_VOL_UP
 // |         |         |         |         |         |         |   |         |         |         |         |         |         |
 // -------------------------------------------------------------   -------------------------------------------------------------
 // |   TAB   |    /    |    4    |    5    |    6    |    -    |   |         |         |         |         |         |         |
-     ES_TAB    ES_SLASH   ES_4      ES_5      ES_6     ES_DASH       ES_LEFT   ES_DOWN    ES_UP    ES_RIGHT  ES_TRANS  ES_TRANS
+     ES_TAB    ES_SLASH   ES_4      ES_5      ES_6     ES_DASH       ES_LEFT   ES_DOWN    ES_UP    ES_RIGHT  ES_TRANS  ES_MUTE
 // |         |         |         |         |         |         |   |         |         |         |         |         |         |
 // -------------------------------------------------------------   -------------------------------------------------------------
 // |  SHFT   |    =    |    7    |    8    |    9    |    0    |   |         |         |         |         |         |         |
-     ES_LSHFT  ES_EQUAL   ES_7      ES_8      ES_9      ES_0         ES_TRANS  ES_TRANS  ES_TRANS  ES_TRANS  ES_TRANS  ES_TRANS
+     ES_LSHFT  ES_EQUAL   ES_7      ES_8      ES_9      ES_0         ES_PREV   ES_STOP   ES_PLAY   ES_NEXT   ES_TRANS ES_VOL_DN
 // |         |         |         |         |         |         |   |         |         |         |         |         |         |
 // -------------------------------------------------------------   -------------------------------------------------------------
 //                               |         |         |         |   |         |         |         |
