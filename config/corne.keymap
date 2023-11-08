@@ -23,14 +23,14 @@
             label = "CAPSLOCK_LEFT";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <ES_LSHFT>, <ES_CAPS>
+            bindings = <ES_LSHFT>, <ES_CAPS>;
         };
         td1: tap_dance_1 {
             compatible = "zmk,behavior-tap-dance";
             label = "CAPSLOCK_RIGHT";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <ES_RSHFT>, <ES_CAPS>
+            bindings = <ES_RSHFT>, <ES_CAPS>;
         };
     };
 
