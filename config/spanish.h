@@ -143,7 +143,7 @@
 #define ES_DOLL     &kp LS(N4)    // $
 #define ES_PERC     &kp LS(N5)    // %
 #define ES_AMPER    &kp LS(N6)    // & 
-#define ES_SLASH    &kp LS(N7)    // /
+#define ES_SLASH    &kp KP_SLASH  // /
 #define ES_EQUAL    &kp LS(N0)    // =
 #define ES_QUEST_R  &kp QUESTION  // ?
 #define ES_QUEST    &kp LS(EQUAL) // ¿
