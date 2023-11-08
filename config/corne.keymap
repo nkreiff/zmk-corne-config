@@ -11,7 +11,7 @@
 
 / {
     behaviors {
-        slash_underscore: slash_underscore {
+        mm0: slash_underscore {
             compatible = "zmk,behavior-mod-morph";
             label = "SLASH_TO_UNDERSCORE";
             #binding-cells = <0>;
@@ -48,7 +48,7 @@
 // |         |         |         |         |         |         |   |         |         |         |         |         |         |
 // -------------------------------------------------------------   -------------------------------------------------------------
 // |SHFT/CAPS|    Z    |    X    |    C    |    V    |    B    |   |    N    |    M    |    ,    |    .    |    /    |   SHFT  |
-      &td0      ES_Z      ES_X      ES_C      ES_V      ES_B          ES_N      ES_M     ES_COMMA  ES_DOT    ES_SLASH    &td1 
+      &td0      ES_Z      ES_X      ES_C      ES_V      ES_B          ES_N      ES_M     ES_COMMA  ES_DOT      &mm0      &td1 
 // |         |         |         |         |         |         |   |         |         |         |         |         |         |
 // -------------------------------------------------------------   -------------------------------------------------------------
 //                               |   CMD   |   LWR   |  SPACE  |   |  RETURN |   RSE   |   ALT   |
