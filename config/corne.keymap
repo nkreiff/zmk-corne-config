@@ -18,6 +18,20 @@
             bindings = <&kp LS(N7)>, <&kp UNDER>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+        td0: tap_dance_0 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "CAPSLOCK_LEFT";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <ES_LSHFT>, <ES_CAPS>
+        };
+        td1: tap_dance_1 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "CAPSLOCK_RIGHT";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <ES_RSHFT>, <ES_CAPS>
+        };
     };
 
     keymap {
@@ -33,12 +47,12 @@
      ES_TAB     ES_A      ES_S      ES_D      ES_F      ES_G          ES_H      ES_J      ES_K      ES_L     ES_EGNE   ES_LCTRL
 // |         |         |         |         |         |         |   |         |         |         |         |         |         |
 // -------------------------------------------------------------   -------------------------------------------------------------
-// |  SHFT   |    Z    |    X    |    C    |    V    |    B    |   |    N    |    M    |    ,    |    .    |    /    |   SHFT  |
-     ES_LSHFT   ES_Z      ES_X      ES_C      ES_V      ES_B          ES_N      ES_M     ES_COMMA  ES_DOT    ES_SLASH  ES_RSHFT 
+// |SHFT/CAPS|    Z    |    X    |    C    |    V    |    B    |   |    N    |    M    |    ,    |    .    |    /    |   SHFT  |
+       td0      ES_Z      ES_X      ES_C      ES_V      ES_B          ES_N      ES_M     ES_COMMA  ES_DOT    ES_SLASH    td1 
 // |         |         |         |         |         |         |   |         |         |         |         |         |         |
 // -------------------------------------------------------------   -------------------------------------------------------------
 //                               |   CMD   |   LWR   |  SPACE  |   |  RETURN |   RSE   |   ALT   |
-                                   ES_LCMD    LAY_2    ES_SPC         ES_RET    LAY_1    ES_ALGR
+                                   ES_LCMD    LAY_2 &lt LCMD SPACE    ES_RET    LAY_1    ES_ALGR
 //                               |         |         |         |   |         |         |         |
 //                               -------------------------------   -------------------------------
             >;
