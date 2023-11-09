@@ -10,6 +10,53 @@
 #include "spanish.h"
 
 / {
+    #define ACCENTED_KEY(NAME, LABEL_U, LABEL_L, LABEL, KEY, DEAD_KEY) \
+        ac_##NAME##_l: ac_##NAME##_l { \
+            wait-ms = <0>; \
+            tap-ms = <0>; \
+            label = LABEL_L; \
+            compatible = "zmk,behavior-macro"; \
+            #binding-cells = <0>; \
+            bindings \
+                = <&macro_press &kp LALT> \
+                , <&macro_tap &kp DEAD_KEY> \
+                , <&macro_release &kp LALT> \
+                , <&macro_tap &kp KEY> \
+                ; \
+        }; \
+        ac_##NAME##_u: ac_##NAME##_u { \
+            wait-ms = <0>; \
+            tap-ms = <0>; \
+            label = LABEL_U; \
+            compatible = "zmk,behavior-macro"; \
+            #binding-cells = <0>; \
+            bindings \
+                = <&macro_release &kp LSHFT> \
+                , <&macro_press &kp LALT> \
+                , <&macro_tap &kp DEAD_KEY> \
+                , <&macro_release &kp LALT> \
+                , <&macro_press &kp LSHFT> \
+                , <&macro_tap &kp KEY> \
+                , <&macro_release &kp LSHFT> \
+                ; \
+        }; \
+        ac_##NAME: ac_##NAME { \
+            label = LABEL; \
+            compatible = "zmk,behavior-mod-morph"; \
+            #binding-cells = <0>; \
+            bindings = <&ac_##NAME##_l>, <&ac_##NAME##_u>; \
+            mods = <(MOD_LSFT|MOD_RSFT)>; \
+            keep-mods = <(MOD_LSFT|MOD_RSFT)>; \
+        };
+
+    accents {
+        ACCENTED_KEY(aacu, "á", "Á", "áÁ", A, E)
+        ACCENTED_KEY(eacu, "é", "É", "éÉ", E, E)
+        ACCENTED_KEY(iacu, "í", "Í", "íÍ", I, E)
+        ACCENTED_KEY(oacu, "ó", "Ó", "óÓ", O, E)
+        ACCENTED_KEY(uacu, "ú", "Ú", "úÚ", U, E)
+    };
+
     behaviors {
         mm0: slash_underscore {
             compatible = "zmk,behavior-mod-morph";
@@ -22,15 +69,22 @@
             compatible = "zmk,behavior-tap-dance";
             label = "CAPSLOCK_LEFT";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <250>;
             bindings = <ES_LSHFT>, <ES_CAPS>;
         };
         td1: tap_dance_1 {
             compatible = "zmk,behavior-tap-dance";
             label = "CAPSLOCK_RIGHT";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <250>;
             bindings = <ES_RSHFT>, <ES_CAPS>;
+        };
+        tdo: o_acute {
+            compatible = "zmk,behavior-tap-dance";
+            label = "O_ACUTE";
+            #binding-cells = <0>;
+            tapping-term-ms = <250>;
+            bindings = <ES_O>, <ac_oacute>;
         };
     };
 
@@ -40,7 +94,7 @@
             bindings = <
 // -------------------------------------------------------------   -------------------------------------------------------------
 // |   ESC   |    Q    |    W    |    E    |    R    |    T    |   |    Y    |    U    |    I    |    O    |    P    |  BKSP   |
-     ES_ESC     ES_Q      ES_W      ES_E      ES_R      ES_T          ES_Y      ES_U      ES_I      ES_O      ES_P     ES_BSPC
+     ES_ESC     ES_Q      ES_W      ES_E      ES_R      ES_T          ES_Y      ES_U      ES_I       tdo      ES_P     ES_BSPC
 // |         |         |         |         |         |         |   |         |         |         |         |         |         |
 // -------------------------------------------------------------   -------------------------------------------------------------
 // |   TAB   |    A    |    S    |    D    |    F    |    G    |   |    H    |    J    |    K    |    L    |    Ñ    |  L-CTRL |
@@ -52,7 +106,7 @@
 // |         |         |         |         |         |         |   |         |         |         |         |         |         |
 // -------------------------------------------------------------   -------------------------------------------------------------
 //                               |   CMD   |   LWR   |  SPACE  |   |  RETURN |   RSE   |   ALT   |
-                                   ES_LCMD    LAY_2 &lt LCMD SPACE    ES_RET    LAY_1    ES_ALGR
+                                   ES_LCMD    LAY_2    ES_SPC         ES_RET    LAY_1    ES_ALGR
 //                               |         |         |         |   |         |         |         |
 //                               -------------------------------   -------------------------------
             >;
