@@ -82,7 +82,7 @@
         ac_oacu_l: ac_oacu_l {
             wait-ms = <0>;
             tap-ms = <0>;
-            label = LABEL_L;
+            label = "LABEL_L";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -95,7 +95,7 @@
         ac_oacu_u: ac_oacu_u {
             wait-ms = <0>;
             tap-ms = <0>;
-            label = LABEL_U;
+            label = "LABEL_U";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -109,7 +109,7 @@
                 ;
         };
         ac_oacu: ac_oacu {
-            label = LABEL;
+            label = "LABEL";
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&ac_oacu_l>, <&ac_oacu_u>;
