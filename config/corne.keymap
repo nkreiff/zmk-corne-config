@@ -84,7 +84,7 @@
             label = "O_ACUTE";
             #binding-cells = <0>;
             tapping-term-ms = <250>;
-            bindings = <ES_O>, <ac_oacute>;
+            bindings = <ES_O>, <ac_oacu>;
         };
     };
 
