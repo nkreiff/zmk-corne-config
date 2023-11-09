@@ -79,6 +79,43 @@
             tapping-term-ms = <250>;
             bindings = <ES_RSHFT>, <ES_CAPS>;
         };
+        ac_oacu_l: ac_oacu_l { \
+            wait-ms = <0>; \
+            tap-ms = <0>; \
+            label = LABEL_L; \
+            compatible = "zmk,behavior-macro"; \
+            #binding-cells = <0>; \
+            bindings \
+                = <&macro_press &kp LALT> \
+                , <&macro_tap &kp DEAD_KEY> \
+                , <&macro_release &kp LALT> \
+                , <&macro_tap &kp KEY> \
+                ; \
+        }; \
+        ac_oacu_u: ac_oacu_u { \
+            wait-ms = <0>; \
+            tap-ms = <0>; \
+            label = LABEL_U; \
+            compatible = "zmk,behavior-macro"; \
+            #binding-cells = <0>; \
+            bindings \
+                = <&macro_release &kp LSHFT> \
+                , <&macro_press &kp LALT> \
+                , <&macro_tap &kp DEAD_KEY> \
+                , <&macro_release &kp LALT> \
+                , <&macro_press &kp LSHFT> \
+                , <&macro_tap &kp KEY> \
+                , <&macro_release &kp LSHFT> \
+                ; \
+        }; \
+        ac_oacu: ac_oacu { \
+            label = LABEL; \
+            compatible = "zmk,behavior-mod-morph"; \
+            #binding-cells = <0>; \
+            bindings = <&ac_oacu_l>, <&ac_oacu_u>; \
+            mods = <(MOD_LSFT|MOD_RSFT)>; \
+            keep-mods = <(MOD_LSFT|MOD_RSFT)>; \
+        };
         tdo: o_acute {
             compatible = "zmk,behavior-tap-dance";
             label = "O_ACUTE";
