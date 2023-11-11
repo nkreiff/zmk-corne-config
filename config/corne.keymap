@@ -7,56 +7,20 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
-#include "spanish.h"
+
+#include "spanish.dtsi"
+#include "helpers.h"
+
+// layers
+#define LAY_0 &mo 0
+#define LAY_1 &mo 1
+#define LAY_2 &mo 2
+#define LAY_3 &mo 3
+
+// Spanish definitions
+#define es_egne   &kp SEMICOLON // Ñ ;
 
 / {
-    #define ACCENTED_KEY(NAME, LABEL_U, LABEL_L, LABEL, KEY, DEAD_KEY) \
-        ac_##NAME##_l: ac_##NAME##_l { \
-            wait-ms = <0>; \
-            tap-ms = <0>; \
-            label = LABEL_L; \
-            compatible = "zmk,behavior-macro"; \
-            #binding-cells = <0>; \
-            bindings \
-                = <&macro_press &kp LALT> \
-                , <&macro_tap &kp DEAD_KEY> \
-                , <&macro_release &kp LALT> \
-                , <&macro_tap &kp KEY> \
-                ; \
-        }; \
-        ac_##NAME##_u: ac_##NAME##_u { \
-            wait-ms = <0>; \
-            tap-ms = <0>; \
-            label = LABEL_U; \
-            compatible = "zmk,behavior-macro"; \
-            #binding-cells = <0>; \
-            bindings \
-                = <&macro_release &kp LSHFT> \
-                , <&macro_press &kp LALT> \
-                , <&macro_tap &kp DEAD_KEY> \
-                , <&macro_release &kp LALT> \
-                , <&macro_press &kp LSHFT> \
-                , <&macro_tap &kp KEY> \
-                , <&macro_release &kp LSHFT> \
-                ; \
-        }; \
-        ac_##NAME: ac_##NAME { \
-            label = LABEL; \
-            compatible = "zmk,behavior-mod-morph"; \
-            #binding-cells = <0>; \
-            bindings = <&ac_##NAME##_l>, <&ac_##NAME##_u>; \
-            mods = <(MOD_LSFT|MOD_RSFT)>; \
-            keep-mods = <(MOD_LSFT|MOD_RSFT)>; \
-        };
-
-    accents {
-        ACCENTED_KEY(aacu, "á", "Á", "áÁ", A, E)
-        ACCENTED_KEY(eacu, "é", "É", "éÉ", E, E)
-        ACCENTED_KEY(iacu, "í", "Í", "íÍ", I, E)
-        ACCENTED_KEY(oacu, "ó", "Ó", "óÓ", O, E)
-        ACCENTED_KEY(uacu, "ú", "Ú", "úÚ", U, E)
-    };
-
     behaviors {
         mm0: slash_underscore {
             compatible = "zmk,behavior-mod-morph";
@@ -74,123 +38,53 @@
         };
         td1: tap_dance_1 {
             compatible = "zmk,behavior-tap-dance";
-            label = "CAPSLOCK_RIGHT";
+            label = "CAPSLOCK_RIGHT"; 
             #binding-cells = <0>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <250>; 
             bindings = <ES_RSHFT>, <ES_CAPS>;
         };
-        ac_oacu_l: ac_oacu_l {
-            wait-ms = <0>;
-            tap-ms = <0>;
-            label = "LABEL_L";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LALT>
-                , <&macro_tap &kp DEAD_KEY>
-                , <&macro_release &kp LALT>
-                , <&macro_tap &kp KEY>
-                ;
-        };
-        ac_oacu_u: ac_oacu_u {
-            wait-ms = <0>;
-            tap-ms = <0>;
-            label = "LABEL_U";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_release &kp LSHFT>
-                , <&macro_press &kp LALT>
-                , <&macro_tap &kp DEAD_KEY>
-                , <&macro_release &kp LALT>
-                , <&macro_press &kp LSHFT>
-                , <&macro_tap &kp KEY>
-                , <&macro_release &kp LSHFT>
-                ;
-        };
-        ac_oacu: ac_oacu {
-            label = "LABEL";
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&ac_oacu_l>, <&ac_oacu_u>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-            keep-mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-        tdo: o_acute {
+        td_o_acute: td_o_acute {
             compatible = "zmk,behavior-tap-dance";
-            label = "O_ACUTE";
+            label = "TAP_DANCE_O_ACUTE"; 
             #binding-cells = <0>;
-            tapping-term-ms = <250>;
-            bindings = <ES_O>, <ac_oacu>;
+            tapping-term-ms = <250>; 
+            bindings = <&kp O>, <&es_o_acute>;
         };
     };
+  }
 
-    keymap {
-        compatible = "zmk,keymap";
-        default_layer {
-            bindings = <
-// -------------------------------------------------------------   -------------------------------------------------------------
-// |   ESC   |    Q    |    W    |    E    |    R    |    T    |   |    Y    |    U    |    I    |    O    |    P    |  BKSP   |
-     ES_ESC     ES_Q      ES_W      ES_E      ES_R      ES_T          ES_Y      ES_U      ES_I       tdo      ES_P     ES_BSPC
-// |         |         |         |         |         |         |   |         |         |         |         |         |         |
-// -------------------------------------------------------------   -------------------------------------------------------------
-// |   TAB   |    A    |    S    |    D    |    F    |    G    |   |    H    |    J    |    K    |    L    |    Ñ    |  L-CTRL |
-     ES_TAB     ES_A      ES_S      ES_D      ES_F      ES_G          ES_H      ES_J      ES_K      ES_L     ES_EGNE   ES_LCTRL
-// |         |         |         |         |         |         |   |         |         |         |         |         |         |
-// -------------------------------------------------------------   -------------------------------------------------------------
-// |SHFT/CAPS|    Z    |    X    |    C    |    V    |    B    |   |    N    |    M    |    ,    |    .    |    /    |   SHFT  |
-      &td0      ES_Z      ES_X      ES_C      ES_V      ES_B          ES_N      ES_M     ES_COMMA  ES_DOT      &mm0      &td1 
-// |         |         |         |         |         |         |   |         |         |         |         |         |         |
-// -------------------------------------------------------------   -------------------------------------------------------------
-//                               |   CMD   |   LWR   |  SPACE  |   |  RETURN |   RSE   |   ALT   |
-                                   ES_LCMD    LAY_2    ES_SPC         ES_RET    LAY_1    ES_ALGR
-//                               |         |         |         |   |         |         |         |
-//                               -------------------------------   -------------------------------
-            >;
-        };
+ZMK_LAYER=(default_layer,
+    // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
+           &kp ESC        &kp Q         &kp W         &kp E         &kp R         &kp T             &kp Y         &kp U         &kp I      &td_o_acute      &kp P        &kp BSPC
+    // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+           &kp TAB        &kp A         &kp S         &kp D         &kp F         &kp G             &kp H         &kp J         &kp K         &kp L        es_egne       &kp RET
+    // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+            &td0          &kp Z         &kp X         &kp C         &kp V         &kp B             &kp N         &kp M       &kp COMMA       &kp DOT       &mm0          &td1 
+    // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
+                                                    &kp LCMD        LAY_2        &kp SPC           &kp RET        LAY_1       &kp RALT
+    //                                           ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
+)
 
-        number_layer {
-            bindings = <
-// -------------------------------------------------------------   -------------------------------------------------------------
-// |   ESC   |    *    |    1    |    2    |    3    |    +    |   |         |         |         |         |         |         |
-     ES_ESC    ES_STAR    ES_1      ES_2      ES_3     ES_PLUS       ES_HOME   ES_PGDN   ES_PGUP   ES_END    ES_TRANS ES_VOL_UP
-// |         |         |         |         |         |         |   |         |         |         |         |         |         |
-// -------------------------------------------------------------   -------------------------------------------------------------
-// |   TAB   |    /    |    4    |    5    |    6    |    -    |   |         |         |         |         |         |         |
-     ES_TAB    ES_SLASH   ES_4      ES_5      ES_6     ES_DASH       ES_LEFT   ES_DOWN    ES_UP    ES_RIGHT  ES_TRANS  ES_MUTE
-// |         |         |         |         |         |         |   |         |         |         |         |         |         |
-// -------------------------------------------------------------   -------------------------------------------------------------
-// |  SHFT   |    =    |    7    |    8    |    9    |    0    |   |         |         |         |         |         |         |
-     ES_LSHFT  ES_EQUAL   ES_7      ES_8      ES_9      ES_0         ES_PREV   ES_STOP   ES_PLAY   ES_NEXT   ES_TRANS ES_VOL_DN
-// |         |         |         |         |         |         |   |         |         |         |         |         |         |
-// -------------------------------------------------------------   -------------------------------------------------------------
-//                               |         |         |         |   |         |         |         |
-                                   ES_TRANS  ES_TRANS  ES_TRANS      ES_TRANS  ES_TRANS  ES_TRANS
-//                               |         |         |         |   |         |         |         |
-//                               -------------------------------   -------------------------------
-            >;
-        };
+ZMK_LAYER=(numbers_layer,
+    // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
+           &kp ESC       &kp STAR      &kp N1        &kp N2        &kp N3       &kp PLUS           &kp HOME     &kp PG_DN     &kp PG_UP      &kp END       &trans      &kp K_VOL_UP 
+    // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+           &kp TAB      &kp SLASH      &kp N4        &kp N5        &kp N6       &kp MINUS          &kp LEFT     &kp DOWN       &kp UP       &kp RIGHT      &trans      &kp K_MUTE
+    // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+          &kp LSHFT     &kp EQUAL      &kp N7        &kp N8        &kp N9        &kp N0           &kp K_PREV    &kp K_STOP    &kp K_PLAY    &kp K_NEXT     &trans      &kp K_VOL_DN
+    // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
+                                                     &trans        &trans        &trans            &trans        &trans        &trans
+    //                                           ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
+)
 
-        symbol_layer {
-            bindings = <
-// -------------------------------------------------------------   -------------------------------------------------------------
-// |   ESC   |    *    |    ~    |    @    |    #    |    +    |   |    "    |    {    |    }    |    =    |    ?    |  BKSP   |
-     ES_ESC    ES_STAR   ES_TILDE   ES_AT    ES_HASH   ES_PLUS     ES_DOUB_APO ES_BRACE ES_BRACE_R ES_EQUAL ES_QUEST_R ES_BSPC
-// |         |         |         |         |         |         |   |         |         |         |         |         |         |
-// -------------------------------------------------------------   -------------------------------------------------------------
-// |   TAB   |    /    |    $    |    %    |    &    |    -    |   |    '    |    (    |    )    |    |    |    `    |  R-CTRL |
-     ES_TAB    ES_SLASH  ES_DOLL   ES_PERC   ES_AMPER  ES_DASH       ES_APOS   ES_PAREN ES_PAREN_R ES_PIPE  ES_ACEN_R  ES_RCTRL
-// |         |         |         |         |         |         |   |         |         |         |         |         |         |
-// -------------------------------------------------------------   -------------------------------------------------------------
-// |  SHFT   |    =    |         |         |         |    ^    |   |    <    |    [    |    ]    |    >    |    \    |   SHFT  |
-     ES_LSHFT  ES_EQUAL  ES_TRANS  ES_TRANS  ES_TRANS ES_ACEN_CIR   ES_LESS  ES_BRACKET ES_BRACKET_R ES_MORE ES_SLASH  ES_RSHFT 
-// |         |         |         |         |         |         |   |         |         |         |         |         |         |
-// -------------------------------------------------------------   -------------------------------------------------------------
-//                               |         |         |         |   |         |         |         |
-                                   ES_TRANS  ES_TRANS  ES_TRANS      ES_TRANS  ES_TRANS  ES_TRANS
-//                               |         |         |         |   |         |         |         |
-//                               -------------------------------   -------------------------------
-            >;
-        };
-    };
-};
+ZMK_LAYER=(symbols_layer,
+    // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
+           &kp ESC      &kp STAR      &kp TILDE     &kp RA(N2)    &kp HASH      &kp PLUS           &kp DQT      &kp LBRC      &kp RBRC      &kp EQUAL     &kp QMARK     &kp BSPC
+    // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+           &kp TAB      &kp SLASH     &kp DOLLAR   &kp PERCENT  &kp AMPERSAND   &kp MINUS          &kp SQT      &kp LPAR      &kp RPAR      &kp PIPE      &kp LBKT      &kp RCTRL
+    // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+          &kp LSHFT     &kp EQUAL      &trans        &trans        &trans      &kp LS(LBKT)        &kp LT       &kp LBRC      &kp RBRC       &kp GT       &kp SLASH     &kp RSHFT 
+    // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
+                                                     &trans        &trans        &trans            &trans        &trans        &trans
+    //                                           ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
+)
