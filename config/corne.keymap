@@ -21,7 +21,6 @@
 #define es_egne   &kp SEMICOLON // Ñ ;
 
 ZMK_BEHAVIOR(mm_slash_under, mod_morph,
-    compatible = "zmk,behavior-mod-morph";
     label = "SLASH_TO_UNDERSCORE";
     #binding-cells = <0>;
     bindings = <&kp SLASH>, <&kp UNDER>;
@@ -29,7 +28,6 @@ ZMK_BEHAVIOR(mm_slash_under, mod_morph,
 )
 
 ZMK_BEHAVIOR(td_ls_caps, tap_dance,
-    compatible = "zmk,behavior-tap-dance";
     label = "CAPSLOCK_LEFT";
     #binding-cells = <0>;
     tapping-term-ms = <250>;
@@ -37,7 +35,6 @@ ZMK_BEHAVIOR(td_ls_caps, tap_dance,
 )
 
 ZMK_BEHAVIOR(td_rs_caps, tap_dance,
-    compatible = "zmk,behavior-tap-dance";
     label = "CAPSLOCK_RIGHT"; 
     #binding-cells = <0>;
     tapping-term-ms = <250>; 
@@ -45,7 +42,6 @@ ZMK_BEHAVIOR(td_rs_caps, tap_dance,
 )
 
 ZMK_BEHAVIOR(td_o_acute, tap_dance,
-    compatible = "zmk,behavior-tap-dance";
     label = "TAP_DANCE_O_ACUTE"; 
     #binding-cells = <0>;
     tapping-term-ms = <250>; 
