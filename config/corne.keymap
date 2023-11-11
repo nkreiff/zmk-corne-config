@@ -21,29 +21,21 @@
 #define es_egne   &kp SEMICOLON // Ñ ;
 
 ZMK_BEHAVIOR(mm_slash_under, mod_morph,
-    label = "SLASH_TO_UNDERSCORE";
-    #binding-cells = <0>;
     bindings = <&kp SLASH>, <&kp UNDER>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
 )
 
 ZMK_BEHAVIOR(td_ls_caps, tap_dance,
-    label = "CAPSLOCK_LEFT";
-    #binding-cells = <0>;
     tapping-term-ms = <250>;
     bindings = <&kp LSHFT>, <&kp CAPS>;
 )
 
 ZMK_BEHAVIOR(td_rs_caps, tap_dance,
-    label = "CAPSLOCK_RIGHT"; 
-    #binding-cells = <0>;
     tapping-term-ms = <250>; 
     bindings = <&kp RSHFT>, <&kp CAPS>;
 )
 
 ZMK_BEHAVIOR(td_o_acute, tap_dance,
-    label = "TAP_DANCE_O_ACUTE"; 
-    #binding-cells = <0>;
     tapping-term-ms = <250>; 
     bindings = <&kp O>, <&es_o_acute>;
 )
