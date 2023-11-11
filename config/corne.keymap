@@ -11,6 +11,8 @@
 #include "helpers.h"
 #include "spanish.dtsi"
 
+#define ______ &trans
+
 // layers
 #define LAY_0 &mo 0
 #define LAY_1 &mo 1
@@ -54,13 +56,13 @@ ZMK_LAYER(default_layer,
 
 ZMK_LAYER(numbers_layer,
     // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-           &kp ESC       &kp STAR      &kp N1        &kp N2        &kp N3       &kp PLUS           &kp HOME     &kp PG_DN     &kp PG_UP      &kp END       &trans      &kp K_VOL_UP 
+           &kp ESC       &kp STAR      &kp N1        &kp N2        &kp N3       &kp PLUS           &kp HOME     &kp PG_DN     &kp PG_UP      &kp END       ______      &kp K_VOL_UP 
     // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-           &kp TAB      &kp SLASH      &kp N4        &kp N5        &kp N6       &kp MINUS          &kp LEFT     &kp DOWN       &kp UP       &kp RIGHT      &trans      &kp K_MUTE
+           &kp TAB      &kp SLASH      &kp N4        &kp N5        &kp N6       &kp MINUS          &kp LEFT     &kp DOWN       &kp UP       &kp RIGHT      ______      &kp K_MUTE
     // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-          &kp LSHFT     &kp EQUAL      &kp N7        &kp N8        &kp N9        &kp N0           &kp K_PREV    &kp K_STOP    &kp K_PLAY    &kp K_NEXT     &trans      &kp K_VOL_DN
+          &kp LSHFT     &kp EQUAL      &kp N7        &kp N8        &kp N9        &kp N0           &kp K_PREV    &kp K_STOP    &kp K_PLAY    &kp K_NEXT     ______      &kp K_VOL_DN
     // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                                     &trans        &trans        &trans            &trans        &trans        &trans
+                                                     ______        ______        ______            ______        ______        ______
     //                                           ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
 )
 
@@ -70,8 +72,8 @@ ZMK_LAYER(symbols_layer,
     // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
            &kp TAB      &kp SLASH     &kp DOLLAR   &kp PERCENT  &kp AMPERSAND   &kp MINUS          &kp SQT      &kp LPAR      &kp RPAR      &kp PIPE      &kp LBKT      &kp RCTRL
     // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-          &kp LSHFT     &kp EQUAL      &trans        &trans        &trans      &kp LS(LBKT)        &kp LT       &kp LBRC      &kp RBRC       &kp GT       &kp SLASH     &kp RSHFT 
+          &kp LSHFT     &kp EQUAL      ______        ______        ______      &kp LS(LBKT)        &kp LT       &kp LBRC      &kp RBRC       &kp GT       &kp SLASH     &kp RSHFT 
     // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                                     &trans        &trans        &trans            &trans        &trans        &trans
+                                                     ______        ______        ______            ______        ______        ______
     //                                           ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
 )
