@@ -20,38 +20,37 @@
 // Spanish definitions
 #define es_egne   &kp SEMICOLON // Ñ ;
 
-/ {
-    behaviors {
-        mm0: slash_underscore {
-            compatible = "zmk,behavior-mod-morph";
-            label = "SLASH_TO_UNDERSCORE";
-            #binding-cells = <0>;
-            bindings = <&kp SLASH>, <&kp UNDER>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-        td0: tap_dance_0 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "CAPSLOCK_LEFT";
-            #binding-cells = <0>;
-            tapping-term-ms = <250>;
-            bindings = <&kp LSHFT>, <&kp CAPS>;
-        };
-        td1: tap_dance_1 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "CAPSLOCK_RIGHT"; 
-            #binding-cells = <0>;
-            tapping-term-ms = <250>; 
-            bindings = <&kp RSHFT>, <&kp CAPS>;
-        };
-        td_o_acute: td_o_acute {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_O_ACUTE"; 
-            #binding-cells = <0>;
-            tapping-term-ms = <250>; 
-            bindings = <&kp O>, <&es_o_acute>;
-        };
-    };
-  };
+ZMK_BEHAVIOR(mm_slash_under, mod_morph,
+    compatible = "zmk,behavior-mod-morph";
+    label = "SLASH_TO_UNDERSCORE";
+    #binding-cells = <0>;
+    bindings = <&kp SLASH>, <&kp UNDER>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+)
+
+ZMK_BEHAVIOR(td_ls_caps, tap_dance,
+    compatible = "zmk,behavior-tap-dance";
+    label = "CAPSLOCK_LEFT";
+    #binding-cells = <0>;
+    tapping-term-ms = <250>;
+    bindings = <&kp LSHFT>, <&kp CAPS>;
+)
+
+ZMK_BEHAVIOR(td_rs_caps, tap_dance,
+    compatible = "zmk,behavior-tap-dance";
+    label = "CAPSLOCK_RIGHT"; 
+    #binding-cells = <0>;
+    tapping-term-ms = <250>; 
+    bindings = <&kp RSHFT>, <&kp CAPS>;
+)
+
+ZMK_BEHAVIOR(td_o_acute, tap_dance,
+    compatible = "zmk,behavior-tap-dance";
+    label = "TAP_DANCE_O_ACUTE"; 
+    #binding-cells = <0>;
+    tapping-term-ms = <250>; 
+    bindings = <&kp O>, <&es_o_acute>;
+)
 
 ZMK_LAYER=(default_layer,
     // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮

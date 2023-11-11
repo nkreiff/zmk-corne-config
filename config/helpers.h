@@ -34,7 +34,7 @@
         }; \
     };
 
-/* ZMK_LAYER */
+    /* ZMK_LAYER */
 
 #define MACRO_CHOOSER3(_1, _2, _3, FUNC, ...) FUNC
 #define ZMK_LAYER(...) MACRO_CHOOSER3(__VA_ARGS__, ZMK_LAYER_3_ARGS, ZMK_LAYER_2_ARGS)(__VA_ARGS__)
