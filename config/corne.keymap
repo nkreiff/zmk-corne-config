@@ -26,7 +26,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "SLASH_TO_UNDERSCORE";
             #binding-cells = <0>;
-            bindings = <ES_SLASH>, <ES_UNDER>;
+            bindings = <&kp SLASH>, <&kp UNDER>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
         td0: tap_dance_0 {
@@ -34,14 +34,14 @@
             label = "CAPSLOCK_LEFT";
             #binding-cells = <0>;
             tapping-term-ms = <250>;
-            bindings = <ES_LSHFT>, <ES_CAPS>;
+            bindings = <&kp LSHFT>, <&kp CAPS>;
         };
         td1: tap_dance_1 {
             compatible = "zmk,behavior-tap-dance";
             label = "CAPSLOCK_RIGHT"; 
             #binding-cells = <0>;
             tapping-term-ms = <250>; 
-            bindings = <ES_RSHFT>, <ES_CAPS>;
+            bindings = <&kp RSHFT>, <&kp CAPS>;
         };
         td_o_acute: td_o_acute {
             compatible = "zmk,behavior-tap-dance";
