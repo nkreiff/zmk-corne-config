@@ -22,6 +22,16 @@
 // Spanish definitions
 #define es_egne   &kp SEMICOLON // Ñ ;
 
+ZMK_BEHAVIOR(td0, tap_dance,
+    tapping-term-ms = <250>;
+    bindings = <ES_LSHFT>, <ES_CAPS>;
+)
+
+ZMK_BEHAVIOR(td1, tap_dance,
+    tapping-term-ms = <250>;
+    bindings = <ES_RSHFT>, <ES_CAPS>;
+)
+
 ZMK_BEHAVIOR(mm_slash_under, mod_morph,
     bindings = <&kp SLASH>, <&kp UNDER>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
