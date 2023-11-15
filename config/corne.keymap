@@ -22,16 +22,6 @@
 // Spanish definitions
 #define es_egne   &kp SEMICOLON // Ñ ;
 
-ZMK_BEHAVIOR(td0, tap_dance,
-    tapping-term-ms = <250>;
-    bindings = <ES_LSHFT>, <ES_CAPS>;
-)
-
-ZMK_BEHAVIOR(td1, tap_dance,
-    tapping-term-ms = <250>;
-    bindings = <ES_RSHFT>, <ES_CAPS>;
-)
-
 ZMK_BEHAVIOR(mm_slash_under, mod_morph,
     bindings = <&kp SLASH>, <&kp UNDER>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -63,7 +53,7 @@ ZMK_BEHAVIOR(td_o_acute, tap_dance,
     // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
            &kp TAB        &kp A         &kp S         &kp D         &kp F         &kp G             &kp H         &kp J         &kp K         &kp L        es_egne       &kp RET
     // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-            &td0          &kp Z         &kp X         &kp C         &kp V         &kp B             &kp N         &kp M       &kp COMMA       &kp DOT       &mm0          &td1 
+         &td_ls_caps      &kp Z         &kp X         &kp C         &kp V         &kp B             &kp N         &kp M       &kp COMMA       &kp DOT       &mm0       &td_rs_caps 
     // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
                                                     &kp LCMD      &mo NUM        &kp SPC           &kp RET      &mo SYM       &kp RALT
     //                                           ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
