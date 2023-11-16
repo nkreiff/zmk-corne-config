@@ -37,18 +37,13 @@ ZMK_BEHAVIOR(td_rs_caps, tap_dance,
     bindings = <&kp RSHFT>, <&kp CAPS>;
 )
 
-ZMK_BEHAVIOR(td_o_acute, tap_dance,
-    tapping-term-ms = <250>; 
-    bindings = <&kp O>, <&es_o_acute>;
-)
-
 ZMK_LAYER(default,
     // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
            &kp ESC        &kp Q         &kp W         &kp E         &kp R         &kp T             &kp Y         &kp U         &kp I      &td_o_acute      &kp P        &kp BSPC
     // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-           &kp TAB        &kp A         &kp S         &kp D         &kp F         &kp G             &kp H         &kp J         &kp K         &kp L        es_egne       &kp RET
+           &kp TAB        &kp A      &mt LCTRL S   &mt LALT D    &mt LCMD F       &kp G             &kp H      &mt RCMD J    &mt RALT K    &mt RCTRL L     es_egne     &mt APOS RET
     // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-         &td_ls_caps      &kp Z         &kp X         &kp C         &kp V         &kp B             &kp N         &kp M       &kp COMMA       &kp DOT     &kp SLASH    &td_rs_caps 
+         &td_ls_caps      &kp Z         &kp X         &kp C         &kp V         &kp B             &kp N         &kp M       &kp COMMA       &kp DO   &mm_slash_under &td_rs_caps 
     // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
                                                     &kp LCMD      &mo SYM        &kp SPC           &kp SPC       &mo NUM       &kp RALT
     //                                           ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
