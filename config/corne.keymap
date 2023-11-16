@@ -22,17 +22,12 @@
 // Spanish definitions
 #define es_egne   &kp SEMICOLON // Ñ ;
 
-ZMK_BEHAVIOR(mm_slash_under, mod_morph,
-    bindings = <&kp SLASH>, <&kp UNDER>;
-    mods = <(MOD_LSFT|MOD_RSFT)>;
-)
-
-ZMK_BEHAVIOR(td_ls_caps, tap_dance,
+ZMK_BEHAVIOR(lshft_caps, tap_dance,
     tapping-term-ms = <250>;
     bindings = <&kp LSHFT>, <&kp CAPS>;
 )
 
-ZMK_BEHAVIOR(td_rs_caps, tap_dance,
+ZMK_BEHAVIOR(rshft_caps, tap_dance,
     tapping-term-ms = <250>; 
     bindings = <&kp RSHFT>, <&kp CAPS>;
 )
@@ -43,7 +38,7 @@ ZMK_LAYER(default,
     // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
            &kp TAB        &kp A      &mt LCTRL S   &mt LALT D    &mt LCMD F       &kp G             &kp H      &mt RCMD J    &mt RALT K    &mt RCTRL L     es_egne       &kp APOS
     // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-         &td_ls_caps      &kp Z         &kp X         &kp C         &kp V         &kp B             &kp N         &kp M       &kp COMMA       &kp DO   &mm_slash_under &td_rs_caps 
+         &lshft_caps      &kp Z         &kp X         &kp C         &kp V         &kp B             &kp N         &kp M       &kp COMMA       &kp DOT     &kp LS(N7)   &rshft_caps
     // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
                                                     &kp LCMD      &mo SYM        &kp SPC           &kp RET       &mo NUM       &kp RALT
     //                                           ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
