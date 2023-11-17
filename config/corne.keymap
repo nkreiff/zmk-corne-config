@@ -58,11 +58,11 @@ ZMK_LAYER(numbers,
 
 ZMK_LAYER(symbol,
     // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-           &kp ESC     &kp LS(RBKT)   &kp LS(N1)    &kp RA(N2)    &kp RA(N3)    &kp RBKT          &kp LS(N2)    &kp RA(LBKT)  &kp RA(RBKT)   &kp LS(N0)  &kp LS(MINUS)  &kp BSPC
+           &kp ESC     &kp LS(RBKT)   &kp LS(N1)    &kp RA(N2)    &kp RA(N3)    &kp RBKT          &kp LS(N2)   &kp RA(LBKT)  &kp RA(RBKT)   &kp LS(N0)  &kp LS(MINUS)   &kp BSPC
     // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-           &kp TAB      &kp LS(N7)    &kp DOLLAR   &kp PERCENT    &kp LS(N6)    &kp SLASH         &kp MINUS      &kp LS(N8)    &kp LS(N9)    &kp RA(N1)    &kp LBKT     &kp APOS
+           &kp TAB      &kp LS(N7)    &kp DOLLAR   &kp PERCENT    &kp LS(N6)    &kp SLASH         &kp MINUS     &kp LS(N8)    &kp LS(N9)    &kp RA(N1)    &kp LBKT      &kp APOS
     // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-          &kp LSHFT     &kp LS(N0)     ______        ______       &kp LS(N1)   &kp LS(LBKT)        &kp LT     &kp RA(APOS) &kp RA(BACKSLASH) &kp LS(LT)   &kp LS(N7)    &kp RSHFT 
+          &kp LSHFT     &kp LS(N0)     ______        ______       &kp LS(N1)   &kp LS(LBKT)       &kp PIPE2   &kp RA(APOS) &kp RA(BACKSLASH) &kp LS(LT)   &kp LS(N7)    &kp RSHFT 
     // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
                                                      ______        ______        ______            ______        ______        ______
     //                                           ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
