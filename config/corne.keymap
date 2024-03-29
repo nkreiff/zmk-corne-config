@@ -40,7 +40,7 @@ ZMK_BEHAVIOR(bspc_del, mod_morph,
     keep-mods = <(MOD_RSFT)>;
 )
 
-{
+/ {
     combos {
         compatible = "zmk,combos";
         combo_caps {
