@@ -46,6 +46,12 @@ ZMK_BEHAVIOR(slash_under, mod_morph,
     keep-mods = <(MOD_RSFT)>;
 )
 
+ZMK_BEHAVIOR(slash_fwd_slash, mod_morph,
+    bindings = <&kp LS(N7)>, <&kp RA(NUBS)>;
+    mods = <(MOD_LALT|MOD_RALT)>;
+    keep-mods = <(MOD_RALT)>;
+)
+
 ZMK_LAYER(default,
     // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
            &kp ESC        &kp Q         &kp W         &kp E         &kp R         &kp T             &kp Y         &kp U         &kp I          &kp O        &kp P       &bspc_del
