@@ -20,6 +20,10 @@
 #define SYM 2
 #define EXT 3
 
+// special keys
+#define ES_LT 0x0064
+#define ES_GT S(ES_LT)
+
 // Spanish definitions
 #define es_egne   &kp SEMICOLON // Ñ ;
 
@@ -63,7 +67,7 @@ ZMK_LAYER(symbols,
     // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
            &kp TAB      &kp LS(N7)    &kp DOLLAR   &kp PERCENT    &kp LS(N6)    &kp SLASH         &kp MINUS     &kp LS(N8)    &kp LS(N9)    &kp RA(N1)    &kp LBKT      &kp APOS
     // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-          &kp LSHFT     &kp LS(N0)  &kp BACKSLASH   &kp UNDER      &kp GT      &kp LS(LBKT)       &kp UNDER   &kp RA(APOS) &kp RA(BACKSLASH) &kp AMPS     &kp LS(N7)    &kp RSHFT 
+          &kp LSHFT     &kp LS(N0)      ______      &kp ES_LT     &kp ES_GT    &kp LS(LBKT)       &kp UNDER   &kp RA(APOS) &kp RA(BACKSLASH) &kp AMPS     &kp LS(N7)    &kp RSHFT 
     // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
                                                      ______        ______        ______            ______        ______        ______
     //                                           ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
