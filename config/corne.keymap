@@ -40,7 +40,16 @@ ZMK_BEHAVIOR(bspc_del, mod_morph,
     keep-mods = <(MOD_RSFT)>;
 )
 
-ZMK_COMBO(tog_caps, 300, <&kp CAPS>, <24 35>, <0>)
+{
+    combos {
+        compatible = "zmk,combos";
+        combo_caps {
+            timeout-ms = <300>;
+            key-positions = <20 29>;
+            bindings = <&kp CAPS>;
+        };
+    };
+};
 
 ZMK_LAYER(default,
     // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
