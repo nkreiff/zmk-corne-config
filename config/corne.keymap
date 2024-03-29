@@ -23,16 +23,6 @@
 // Spanish definitions
 #define ES_EGNE   &kp SEMICOLON // Ñ ;
 
-ZMK_BEHAVIOR(lshft_caps, tap_dance,
-    tapping-term-ms = <300>;
-    bindings = <&kp LSHFT>, <&kp CAPS>;
-)
-
-ZMK_BEHAVIOR(rshft_caps, tap_dance,
-    tapping-term-ms = <300>; 
-    bindings = <&kp RSHFT>, <&kp CAPS>;
-)
-
 ZMK_BEHAVIOR(bspc_del, mod_morph,
     bindings = <&kp BACKSPACE>, <&kp DELETE>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -44,7 +34,7 @@ ZMK_BEHAVIOR(bspc_del, mod_morph,
         compatible = "zmk,combos";
         combo_caps {
             timeout-ms = <300>;
-            key-positions = <20 29>;
+            key-positions = <24 35>;
             bindings = <&kp CAPS>;
         };
     };
