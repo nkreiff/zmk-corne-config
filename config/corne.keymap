@@ -40,8 +40,8 @@ ZMK_BEHAVIOR(bspc_del, mod_morph,
     };
 };
 
-ZMK_BEHAVIOR(bspc_del, mod_morph,
-    bindings = <&kp BACKSPACE>, <&kp DELETE>;
+ZMK_BEHAVIOR(slash_under, mod_morph,
+    bindings = <&kp LS(N7)>, <&kp LS(SLASH)>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
     keep-mods = <(MOD_RSFT)>;
 )
@@ -52,7 +52,7 @@ ZMK_LAYER(default,
     // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
            &kp TAB        &kp A         &kp S         &kp D         &kp F         &kp G             &kp H         &kp J         &kp K          &kp L       ES_EGNE       &kp APOS
     // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-          &kp LSHFT       &kp Z         &kp X         &kp C         &kp V         &kp B             &kp N         &kp M       &kp COMMA       &kp DOT     &kp LS(N7)    &kp RSHFT
+          &kp LSHFT       &kp Z         &kp X         &kp C         &kp V         &kp B             &kp N         &kp M       &kp COMMA       &kp DOT    &slash_under   &kp RSHFT
     // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
                                                     &kp LCMD       &mo SYM       &kp SPC        &mt LCTRL RET    &mo NUM       &kp RALT
     //                                           ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
