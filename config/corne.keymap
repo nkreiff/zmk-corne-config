@@ -34,7 +34,6 @@ ZMK_BEHAVIOR(rshft_caps, tap_dance,
 )
 
 ZMK_BEHAVIOR(bspc_del, mod_morph,
-    #binding-cells = <0>;
     bindings = <&kp BACKSPACE>, <&kp DELETE>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
     keep-mods = <(MOD_RSFT)>;
