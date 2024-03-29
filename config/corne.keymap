@@ -23,8 +23,11 @@
 
 // Spanish definitions
 #define ES_EGNE   &kp SEMICOLON // Ñ ;
-#define ES_LT     &kp 0x0064    // <
-#define ES_GT     &kp S(0x0064) // >
+enum kc_defines {
+  KC_NONUS_BACKSLASH = 0x0064
+}
+#define ES_LT     &kp KC_NONUS_BACKSLASH  // <
+#define ES_GT     &kp S(ES_LT)            // >
 
 ZMK_BEHAVIOR(bspc_del, mod_morph,
     bindings = <&kp BACKSPACE>, <&kp DELETE>;
