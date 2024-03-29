@@ -21,7 +21,7 @@
 #define EXT 3
 
 // Spanish definitions
-#define es_egne   &kp SEMICOLON // Ñ ;
+#define ES_EGNE   &kp SEMICOLON // Ñ ;
 
 ZMK_BEHAVIOR(lshft_caps, tap_dance,
     tapping-term-ms = <300>;
@@ -33,11 +33,20 @@ ZMK_BEHAVIOR(rshft_caps, tap_dance,
     bindings = <&kp RSHFT>, <&kp CAPS>;
 )
 
+ZMK_BEHAVIOR(bspc_del, mod_morph,
+    #binding-cells = <0>;
+    bindings = <&kp BACKSPACE>, <&kp DELETE>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+    keep-mods = <(MOD_RSFT)>;
+)
+
+ZMK_COMBO(tog_caps, 300, <&kp CAPS>, <24 35>, <0>)
+
 ZMK_LAYER(default,
     // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-           &kp ESC        &kp Q         &kp W         &kp E         &kp R         &kp T             &kp Y         &kp U         &kp I          &kp O        &kp P        &kp BSPC
+           &kp ESC        &kp Q         &kp W         &kp E         &kp R         &kp T             &kp Y         &kp U         &kp I          &kp O        &kp P       &bspc_del
     // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-           &kp TAB        &kp A         &kp S         &kp D         &kp F         &kp G             &kp H         &kp J         &kp K          &kp L       es_egne       &kp APOS
+           &kp TAB        &kp A         &kp S         &kp D         &kp F         &kp G             &kp H         &kp J         &kp K          &kp L       ES_EGNE       &kp APOS
     // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
          &lshft_caps      &kp Z         &kp X         &kp C         &kp V         &kp B             &kp N         &kp M       &kp COMMA       &kp DOT     &kp LS(N7)   &rshft_caps
     // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
