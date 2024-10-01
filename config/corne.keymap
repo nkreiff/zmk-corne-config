@@ -31,6 +31,12 @@ ZMK_BEHAVIOR(bspc_del, mod_morph,
     keep-mods = <(MOD_RSFT)>;
 )
 
+ZMK_BEHAVIOR(dot_gt, mod_morph,
+    bindings = <&kp DOT>, <&kp GT>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+    keep-mods = <(MOD_RSFT)>;
+)
+
 / {
     combos {
         compatible = "zmk,combos";
@@ -54,7 +60,7 @@ ZMK_LAYER(default,
     // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
            &kp TAB        &kp A         &kp S         &kp D         &kp F         &kp G             &kp H         &kp J         &kp K          &kp L       ES_EGNE       &kp APOS
     // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-          &kp LSHFT       &kp Z         &kp X         &kp C         &kp V         &kp B             &kp N         &kp M       &kp COMMA       &kp DOT    &slash_under   &kp RSHFT
+          &kp LSHFT       &kp Z         &kp X         &kp C         &kp V         &kp B             &kp N         &kp M       &kp COMMA       &dot_gt    &slash_under   &kp RSHFT
     // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
                                                     &kp LCMD       &mo SYM       &kp SPC        &mt LCTRL RET    &mo NUM       &kp RALT
     //                                           ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
