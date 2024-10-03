@@ -1333,82 +1333,82 @@
 #define QK_AREP QK_ALT_REPEAT_KEY
 
 // Range Helpers
-#define IS_QK_BASIC(code) ((code) >= QK_BASIC && (code) <= QK_BASIC_MAX)
-#define IS_QK_MODS(code) ((code) >= QK_MODS && (code) <= QK_MODS_MAX)
-#define IS_QK_MOD_TAP(code) ((code) >= QK_MOD_TAP && (code) <= QK_MOD_TAP_MAX)
-#define IS_QK_LAYER_TAP(code) ((code) >= QK_LAYER_TAP && (code) <= QK_LAYER_TAP_MAX)
-#define IS_QK_LAYER_MOD(code) ((code) >= QK_LAYER_MOD && (code) <= QK_LAYER_MOD_MAX)
-#define IS_QK_TO(code) ((code) >= QK_TO && (code) <= QK_TO_MAX)
-#define IS_QK_MOMENTARY(code) ((code) >= QK_MOMENTARY && (code) <= QK_MOMENTARY_MAX)
-#define IS_QK_DEF_LAYER(code) ((code) >= QK_DEF_LAYER && (code) <= QK_DEF_LAYER_MAX)
-#define IS_QK_TOGGLE_LAYER(code) ((code) >= QK_TOGGLE_LAYER && (code) <= QK_TOGGLE_LAYER_MAX)
-#define IS_QK_ONE_SHOT_LAYER(code) ((code) >= QK_ONE_SHOT_LAYER && (code) <= QK_ONE_SHOT_LAYER_MAX)
-#define IS_QK_ONE_SHOT_MOD(code) ((code) >= QK_ONE_SHOT_MOD && (code) <= QK_ONE_SHOT_MOD_MAX)
-#define IS_QK_LAYER_TAP_TOGGLE(code) ((code) >= QK_LAYER_TAP_TOGGLE && (code) <= QK_LAYER_TAP_TOGGLE_MAX)
-#define IS_QK_SWAP_HANDS(code) ((code) >= QK_SWAP_HANDS && (code) <= QK_SWAP_HANDS_MAX)
-#define IS_QK_TAP_DANCE(code) ((code) >= QK_TAP_DANCE && (code) <= QK_TAP_DANCE_MAX)
-#define IS_QK_MAGIC(code) ((code) >= QK_MAGIC && (code) <= QK_MAGIC_MAX)
-#define IS_QK_MIDI(code) ((code) >= QK_MIDI && (code) <= QK_MIDI_MAX)
-#define IS_QK_SEQUENCER(code) ((code) >= QK_SEQUENCER && (code) <= QK_SEQUENCER_MAX)
-#define IS_QK_JOYSTICK(code) ((code) >= QK_JOYSTICK && (code) <= QK_JOYSTICK_MAX)
-#define IS_QK_PROGRAMMABLE_BUTTON(code) ((code) >= QK_PROGRAMMABLE_BUTTON && (code) <= QK_PROGRAMMABLE_BUTTON_MAX)
-#define IS_QK_AUDIO(code) ((code) >= QK_AUDIO && (code) <= QK_AUDIO_MAX)
-#define IS_QK_STENO(code) ((code) >= QK_STENO && (code) <= QK_STENO_MAX)
-#define IS_QK_MACRO(code) ((code) >= QK_MACRO && (code) <= QK_MACRO_MAX)
-#define IS_QK_LIGHTING(code) ((code) >= QK_LIGHTING && (code) <= QK_LIGHTING_MAX)
-#define IS_QK_QUANTUM(code) ((code) >= QK_QUANTUM && (code) <= QK_QUANTUM_MAX)
-#define IS_QK_KB(code) ((code) >= QK_KB && (code) <= QK_KB_MAX)
-#define IS_QK_USER(code) ((code) >= QK_USER && (code) <= QK_USER_MAX)
-#define IS_QK_UNICODEMAP(code) ((code) >= QK_UNICODEMAP && (code) <= QK_UNICODEMAP_MAX)
-#define IS_QK_UNICODE(code) ((code) >= QK_UNICODE && (code) <= QK_UNICODE_MAX)
-#define IS_QK_UNICODEMAP_PAIR(code) ((code) >= QK_UNICODEMAP_PAIR && (code) <= QK_UNICODEMAP_PAIR_MAX)
+// #define IS_QK_BASIC(code) ((code) >= QK_BASIC && (code) <= QK_BASIC_MAX)
+// #define IS_QK_MODS(code) ((code) >= QK_MODS && (code) <= QK_MODS_MAX)
+// #define IS_QK_MOD_TAP(code) ((code) >= QK_MOD_TAP && (code) <= QK_MOD_TAP_MAX)
+// #define IS_QK_LAYER_TAP(code) ((code) >= QK_LAYER_TAP && (code) <= QK_LAYER_TAP_MAX)
+// #define IS_QK_LAYER_MOD(code) ((code) >= QK_LAYER_MOD && (code) <= QK_LAYER_MOD_MAX)
+// #define IS_QK_TO(code) ((code) >= QK_TO && (code) <= QK_TO_MAX)
+// #define IS_QK_MOMENTARY(code) ((code) >= QK_MOMENTARY && (code) <= QK_MOMENTARY_MAX)
+// #define IS_QK_DEF_LAYER(code) ((code) >= QK_DEF_LAYER && (code) <= QK_DEF_LAYER_MAX)
+// #define IS_QK_TOGGLE_LAYER(code) ((code) >= QK_TOGGLE_LAYER && (code) <= QK_TOGGLE_LAYER_MAX)
+// #define IS_QK_ONE_SHOT_LAYER(code) ((code) >= QK_ONE_SHOT_LAYER && (code) <= QK_ONE_SHOT_LAYER_MAX)
+// #define IS_QK_ONE_SHOT_MOD(code) ((code) >= QK_ONE_SHOT_MOD && (code) <= QK_ONE_SHOT_MOD_MAX)
+// #define IS_QK_LAYER_TAP_TOGGLE(code) ((code) >= QK_LAYER_TAP_TOGGLE && (code) <= QK_LAYER_TAP_TOGGLE_MAX)
+// #define IS_QK_SWAP_HANDS(code) ((code) >= QK_SWAP_HANDS && (code) <= QK_SWAP_HANDS_MAX)
+// #define IS_QK_TAP_DANCE(code) ((code) >= QK_TAP_DANCE && (code) <= QK_TAP_DANCE_MAX)
+// #define IS_QK_MAGIC(code) ((code) >= QK_MAGIC && (code) <= QK_MAGIC_MAX)
+// #define IS_QK_MIDI(code) ((code) >= QK_MIDI && (code) <= QK_MIDI_MAX)
+// #define IS_QK_SEQUENCER(code) ((code) >= QK_SEQUENCER && (code) <= QK_SEQUENCER_MAX)
+// #define IS_QK_JOYSTICK(code) ((code) >= QK_JOYSTICK && (code) <= QK_JOYSTICK_MAX)
+// #define IS_QK_PROGRAMMABLE_BUTTON(code) ((code) >= QK_PROGRAMMABLE_BUTTON && (code) <= QK_PROGRAMMABLE_BUTTON_MAX)
+// #define IS_QK_AUDIO(code) ((code) >= QK_AUDIO && (code) <= QK_AUDIO_MAX)
+// #define IS_QK_STENO(code) ((code) >= QK_STENO && (code) <= QK_STENO_MAX)
+// #define IS_QK_MACRO(code) ((code) >= QK_MACRO && (code) <= QK_MACRO_MAX)
+// #define IS_QK_LIGHTING(code) ((code) >= QK_LIGHTING && (code) <= QK_LIGHTING_MAX)
+// #define IS_QK_QUANTUM(code) ((code) >= QK_QUANTUM && (code) <= QK_QUANTUM_MAX)
+// #define IS_QK_KB(code) ((code) >= QK_KB && (code) <= QK_KB_MAX)
+// #define IS_QK_USER(code) ((code) >= QK_USER && (code) <= QK_USER_MAX)
+// #define IS_QK_UNICODEMAP(code) ((code) >= QK_UNICODEMAP && (code) <= QK_UNICODEMAP_MAX)
+// #define IS_QK_UNICODE(code) ((code) >= QK_UNICODE && (code) <= QK_UNICODE_MAX)
+// #define IS_QK_UNICODEMAP_PAIR(code) ((code) >= QK_UNICODEMAP_PAIR && (code) <= QK_UNICODEMAP_PAIR_MAX)
 
 // Group Helpers
-#define IS_INTERNAL_KEYCODE(code) ((code) >= KC_NO && (code) <= KC_TRANSPARENT)
-#define IS_BASIC_KEYCODE(code) ((code) >= KC_A && (code) <= KC_EXSEL)
-#define IS_SYSTEM_KEYCODE(code) ((code) >= KC_SYSTEM_POWER && (code) <= KC_SYSTEM_WAKE)
-#define IS_CONSUMER_KEYCODE(code) ((code) >= KC_AUDIO_MUTE && (code) <= KC_LAUNCHPAD)
-#define IS_MOUSE_KEYCODE(code) ((code) >= QK_MOUSE_CURSOR_UP && (code) <= QK_MOUSE_ACCELERATION_2)
-#define IS_MODIFIER_KEYCODE(code) ((code) >= KC_LEFT_CTRL && (code) <= KC_RIGHT_GUI)
-#define IS_SWAP_HANDS_KEYCODE(code) ((code) >= QK_SWAP_HANDS_TOGGLE && (code) <= QK_SWAP_HANDS_ONE_SHOT)
-#define IS_MAGIC_KEYCODE(code) ((code) >= QK_MAGIC_SWAP_CONTROL_CAPS_LOCK && (code) <= QK_MAGIC_TOGGLE_ESCAPE_CAPS_LOCK)
-#define IS_MIDI_KEYCODE(code) ((code) >= QK_MIDI_ON && (code) <= QK_MIDI_PITCH_BEND_UP)
-#define IS_SEQUENCER_KEYCODE(code) ((code) >= QK_SEQUENCER_ON && (code) <= QK_SEQUENCER_STEPS_CLEAR)
-#define IS_JOYSTICK_KEYCODE(code) ((code) >= QK_JOYSTICK_BUTTON_0 && (code) <= QK_JOYSTICK_BUTTON_31)
-#define IS_PROGRAMMABLE_BUTTON_KEYCODE(code) ((code) >= QK_PROGRAMMABLE_BUTTON_1 && (code) <= QK_PROGRAMMABLE_BUTTON_32)
-#define IS_AUDIO_KEYCODE(code) ((code) >= QK_AUDIO_ON && (code) <= QK_AUDIO_VOICE_PREVIOUS)
-#define IS_STENO_KEYCODE(code) ((code) >= QK_STENO_BOLT && (code) <= QK_STENO_COMB_MAX)
-#define IS_MACRO_KEYCODE(code) ((code) >= QK_MACRO_0 && (code) <= QK_MACRO_31)
-#define IS_BACKLIGHT_KEYCODE(code) ((code) >= QK_BACKLIGHT_ON && (code) <= QK_BACKLIGHT_TOGGLE_BREATHING)
-#define IS_LED_MATRIX_KEYCODE(code) ((code) >= QK_LED_MATRIX_ON && (code) <= QK_LED_MATRIX_SPEED_DOWN)
-#define IS_UNDERGLOW_KEYCODE(code) ((code) >= QK_UNDERGLOW_TOGGLE && (code) <= QK_UNDERGLOW_SPEED_DOWN)
-#define IS_RGB_KEYCODE(code) ((code) >= RGB_MODE_PLAIN && (code) <= RGB_MODE_TWINKLE)
-#define IS_RGB_MATRIX_KEYCODE(code) ((code) >= QK_RGB_MATRIX_ON && (code) <= QK_RGB_MATRIX_SPEED_DOWN)
-#define IS_QUANTUM_KEYCODE(code) ((code) >= QK_BOOTLOADER && (code) <= QK_ALT_REPEAT_KEY)
-#define IS_KB_KEYCODE(code) ((code) >= QK_KB_0 && (code) <= QK_KB_31)
-#define IS_USER_KEYCODE(code) ((code) >= QK_USER_0 && (code) <= QK_USER_31)
+// #define IS_INTERNAL_KEYCODE(code) ((code) >= KC_NO && (code) <= KC_TRANSPARENT)
+// #define IS_BASIC_KEYCODE(code) ((code) >= KC_A && (code) <= KC_EXSEL)
+// #define IS_SYSTEM_KEYCODE(code) ((code) >= KC_SYSTEM_POWER && (code) <= KC_SYSTEM_WAKE)
+// #define IS_CONSUMER_KEYCODE(code) ((code) >= KC_AUDIO_MUTE && (code) <= KC_LAUNCHPAD)
+// #define IS_MOUSE_KEYCODE(code) ((code) >= QK_MOUSE_CURSOR_UP && (code) <= QK_MOUSE_ACCELERATION_2)
+// #define IS_MODIFIER_KEYCODE(code) ((code) >= KC_LEFT_CTRL && (code) <= KC_RIGHT_GUI)
+// #define IS_SWAP_HANDS_KEYCODE(code) ((code) >= QK_SWAP_HANDS_TOGGLE && (code) <= QK_SWAP_HANDS_ONE_SHOT)
+// #define IS_MAGIC_KEYCODE(code) ((code) >= QK_MAGIC_SWAP_CONTROL_CAPS_LOCK && (code) <= QK_MAGIC_TOGGLE_ESCAPE_CAPS_LOCK)
+// #define IS_MIDI_KEYCODE(code) ((code) >= QK_MIDI_ON && (code) <= QK_MIDI_PITCH_BEND_UP)
+// #define IS_SEQUENCER_KEYCODE(code) ((code) >= QK_SEQUENCER_ON && (code) <= QK_SEQUENCER_STEPS_CLEAR)
+// #define IS_JOYSTICK_KEYCODE(code) ((code) >= QK_JOYSTICK_BUTTON_0 && (code) <= QK_JOYSTICK_BUTTON_31)
+// #define IS_PROGRAMMABLE_BUTTON_KEYCODE(code) ((code) >= QK_PROGRAMMABLE_BUTTON_1 && (code) <= QK_PROGRAMMABLE_BUTTON_32)
+// #define IS_AUDIO_KEYCODE(code) ((code) >= QK_AUDIO_ON && (code) <= QK_AUDIO_VOICE_PREVIOUS)
+// #define IS_STENO_KEYCODE(code) ((code) >= QK_STENO_BOLT && (code) <= QK_STENO_COMB_MAX)
+// #define IS_MACRO_KEYCODE(code) ((code) >= QK_MACRO_0 && (code) <= QK_MACRO_31)
+// #define IS_BACKLIGHT_KEYCODE(code) ((code) >= QK_BACKLIGHT_ON && (code) <= QK_BACKLIGHT_TOGGLE_BREATHING)
+// #define IS_LED_MATRIX_KEYCODE(code) ((code) >= QK_LED_MATRIX_ON && (code) <= QK_LED_MATRIX_SPEED_DOWN)
+// #define IS_UNDERGLOW_KEYCODE(code) ((code) >= QK_UNDERGLOW_TOGGLE && (code) <= QK_UNDERGLOW_SPEED_DOWN)
+// #define IS_RGB_KEYCODE(code) ((code) >= RGB_MODE_PLAIN && (code) <= RGB_MODE_TWINKLE)
+// #define IS_RGB_MATRIX_KEYCODE(code) ((code) >= QK_RGB_MATRIX_ON && (code) <= QK_RGB_MATRIX_SPEED_DOWN)
+// #define IS_QUANTUM_KEYCODE(code) ((code) >= QK_BOOTLOADER && (code) <= QK_ALT_REPEAT_KEY)
+// #define IS_KB_KEYCODE(code) ((code) >= QK_KB_0 && (code) <= QK_KB_31)
+// #define IS_USER_KEYCODE(code) ((code) >= QK_USER_0 && (code) <= QK_USER_31)
 
 // Switch statement Helpers
-#define INTERNAL_KEYCODE_RANGE              KC_NO ... KC_TRANSPARENT
-#define BASIC_KEYCODE_RANGE                 KC_A ... KC_EXSEL
-#define SYSTEM_KEYCODE_RANGE                KC_SYSTEM_POWER ... KC_SYSTEM_WAKE
-#define CONSUMER_KEYCODE_RANGE              KC_AUDIO_MUTE ... KC_LAUNCHPAD
-#define MOUSE_KEYCODE_RANGE                 QK_MOUSE_CURSOR_UP ... QK_MOUSE_ACCELERATION_2
-#define MODIFIER_KEYCODE_RANGE              KC_LEFT_CTRL ... KC_RIGHT_GUI
-#define SWAP_HANDS_KEYCODE_RANGE            QK_SWAP_HANDS_TOGGLE ... QK_SWAP_HANDS_ONE_SHOT
-#define MAGIC_KEYCODE_RANGE                 QK_MAGIC_SWAP_CONTROL_CAPS_LOCK ... QK_MAGIC_TOGGLE_ESCAPE_CAPS_LOCK
-#define MIDI_KEYCODE_RANGE                  QK_MIDI_ON ... QK_MIDI_PITCH_BEND_UP
-#define SEQUENCER_KEYCODE_RANGE             QK_SEQUENCER_ON ... QK_SEQUENCER_STEPS_CLEAR
-#define JOYSTICK_KEYCODE_RANGE              QK_JOYSTICK_BUTTON_0 ... QK_JOYSTICK_BUTTON_31
-#define PROGRAMMABLE_BUTTON_KEYCODE_RANGE   QK_PROGRAMMABLE_BUTTON_1 ... QK_PROGRAMMABLE_BUTTON_32
-#define AUDIO_KEYCODE_RANGE                 QK_AUDIO_ON ... QK_AUDIO_VOICE_PREVIOUS
-#define STENO_KEYCODE_RANGE                 QK_STENO_BOLT ... QK_STENO_COMB_MAX
-#define MACRO_KEYCODE_RANGE                 QK_MACRO_0 ... QK_MACRO_31
-#define BACKLIGHT_KEYCODE_RANGE             QK_BACKLIGHT_ON ... QK_BACKLIGHT_TOGGLE_BREATHING
-#define LED_MATRIX_KEYCODE_RANGE            QK_LED_MATRIX_ON ... QK_LED_MATRIX_SPEED_DOWN
-#define UNDERGLOW_KEYCODE_RANGE             QK_UNDERGLOW_TOGGLE ... QK_UNDERGLOW_SPEED_DOWN
-#define RGB_KEYCODE_RANGE                   RGB_MODE_PLAIN ... RGB_MODE_TWINKLE
-#define RGB_MATRIX_KEYCODE_RANGE            QK_RGB_MATRIX_ON ... QK_RGB_MATRIX_SPEED_DOWN
-#define QUANTUM_KEYCODE_RANGE               QK_BOOTLOADER ... QK_ALT_REPEAT_KEY
-#define KB_KEYCODE_RANGE                    QK_KB_0 ... QK_KB_31
-#define USER_KEYCODE_RANGE                  QK_USER_0 ... QK_USER_31
+// #define INTERNAL_KEYCODE_RANGE              KC_NO ... KC_TRANSPARENT
+// #define BASIC_KEYCODE_RANGE                 KC_A ... KC_EXSEL
+// #define SYSTEM_KEYCODE_RANGE                KC_SYSTEM_POWER ... KC_SYSTEM_WAKE
+// #define CONSUMER_KEYCODE_RANGE              KC_AUDIO_MUTE ... KC_LAUNCHPAD
+// #define MOUSE_KEYCODE_RANGE                 QK_MOUSE_CURSOR_UP ... QK_MOUSE_ACCELERATION_2
+// #define MODIFIER_KEYCODE_RANGE              KC_LEFT_CTRL ... KC_RIGHT_GUI
+// #define SWAP_HANDS_KEYCODE_RANGE            QK_SWAP_HANDS_TOGGLE ... QK_SWAP_HANDS_ONE_SHOT
+// #define MAGIC_KEYCODE_RANGE                 QK_MAGIC_SWAP_CONTROL_CAPS_LOCK ... QK_MAGIC_TOGGLE_ESCAPE_CAPS_LOCK
+// #define MIDI_KEYCODE_RANGE                  QK_MIDI_ON ... QK_MIDI_PITCH_BEND_UP
+// #define SEQUENCER_KEYCODE_RANGE             QK_SEQUENCER_ON ... QK_SEQUENCER_STEPS_CLEAR
+// #define JOYSTICK_KEYCODE_RANGE              QK_JOYSTICK_BUTTON_0 ... QK_JOYSTICK_BUTTON_31
+// #define PROGRAMMABLE_BUTTON_KEYCODE_RANGE   QK_PROGRAMMABLE_BUTTON_1 ... QK_PROGRAMMABLE_BUTTON_32
+// #define AUDIO_KEYCODE_RANGE                 QK_AUDIO_ON ... QK_AUDIO_VOICE_PREVIOUS
+// #define STENO_KEYCODE_RANGE                 QK_STENO_BOLT ... QK_STENO_COMB_MAX
+// #define MACRO_KEYCODE_RANGE                 QK_MACRO_0 ... QK_MACRO_31
+// #define BACKLIGHT_KEYCODE_RANGE             QK_BACKLIGHT_ON ... QK_BACKLIGHT_TOGGLE_BREATHING
+// #define LED_MATRIX_KEYCODE_RANGE            QK_LED_MATRIX_ON ... QK_LED_MATRIX_SPEED_DOWN
+// #define UNDERGLOW_KEYCODE_RANGE             QK_UNDERGLOW_TOGGLE ... QK_UNDERGLOW_SPEED_DOWN
+// #define RGB_KEYCODE_RANGE                   RGB_MODE_PLAIN ... RGB_MODE_TWINKLE
+// #define RGB_MATRIX_KEYCODE_RANGE            QK_RGB_MATRIX_ON ... QK_RGB_MATRIX_SPEED_DOWN
+// #define QUANTUM_KEYCODE_RANGE               QK_BOOTLOADER ... QK_ALT_REPEAT_KEY
+// #define KB_KEYCODE_RANGE                    QK_KB_0 ... QK_KB_31
+// #define USER_KEYCODE_RANGE                  QK_USER_0 ... QK_USER_31
